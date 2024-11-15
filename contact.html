@@ -5,6 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Information</title>
+    <!-- Your product content goes here -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    
+    <script>
+        function openCart() {
+            // Add your logic to open the cart or navigate to the cart page
+            alert('Cart clicked!');
+        }
+    </script>
+     <script>
+        // Simulate loading with a progress bar
+        let progress = 0;
+        const progressBar = document.getElementById('progressBar');
+        const content = document.querySelector('.content');
+
+        const interval = setInterval(() => {
+            if (progress < 100) {
+                progress += 10; // Increment progress
+                progressBar.style.width = progress + '%'; // Update progress bar width
+            } else {
+                clearInterval(interval); // Stop the interval
+                setTimeout(() => {
+                    progressBar.parentElement.style.display = 'none'; // Hide progress bar
+                    content.style.display = 'block'; // Show content
+                    mainContent.style.display = 'block';
+                }, 500); // Short delay before showing content
+            }
+        }, 300); // Adjust loading speed (300ms per increment)
+    </script>
 
     <!-- Internal Styles for Basic Styling -->
     <style>
@@ -14,6 +45,17 @@
             margin: 0;
             padding: 0;
             text-align: center;
+        }
+        .topnav a:hover {
+            color: #f39c12;
+        }
+        .topnav a {
+            color: #140d02;
+            padding: 5px;
+            font-family: Courier; 
+        }
+        .topnav {
+            padding: 10px;
         }
 
         section {
@@ -37,6 +79,30 @@
             color: #1909f8;
             text-decoration: none;
         }
+        .progress-container {
+            width: 100%;
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 45px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        P {
+            font-family: moseu;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: #3498db; /* Blue */
+            width: 0; /* Initial width */
+            transition: width 0.9s; /* Smooth transition */
+        }
+
+        .content {
+            display: none; /* Hidden until loaded */
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -44,21 +110,14 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="topnav" id="myTopnav">
-    <a href="index.html.html">Home</a>
+    <a href="home.html">Home</a>
     <a href="services.html">Services</a>
     <a href="products.html">Products</a>
     <a href="contact.html">Contact</a>
-    <a href="sig.html">Sign up</a>
-
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-    </a>
+    <a href="signup2.html">Sign up</a>
     
 </div>
-
-
 </body>
-
 <body>
 
     <h1>Contact Information</h1>
@@ -71,10 +130,10 @@
         <p>Email: <a href="jecfam80@gmail.com">jecfam80@gmail.com</a></p>
 
         <!-- Phone Number -->
-        <p>Phone: +254743896973</p>
+        <p>Phone: +254743896973 / +254796918764 /+254792223073</p>
 
         <!-- Link to Contact Form -->
-        <p>Alternatively, you can <a href="contact.html">fill out our contact form</a>.</p>
+        <p>Alternatively, you can on social media handles in the homepage</p>
     </section>
 
 </body>
