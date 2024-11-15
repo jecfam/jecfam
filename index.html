@@ -4,6 +4,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<title>JECFAM</title>
+<div class="loader"></div>
+    <div class="content">
 </head>
 <style>
 .fa {
@@ -14,36 +17,32 @@
   text-decoration: none;
   margin: 5px 2px;
   border-radius: 100%;  
-  color: yellow;
+  color: white;
 }
 .fa:hover {
     opacity: 0.7;
+    color: orange;
 }
   div {
     width: none;
     height: none;
-
+    font-size: smaller;
 </style>
   <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="styles.css">
 <div class="topnav" id="myTopnav">
-    <a href="index.html">Home</a>
+    <a href="home.html">Home</a>
     <a href="services.html">Services</a>
     <a href="products.html">Products</a>
     <a href="contact.html">Contact</a>
-    <a href="sig.html">Sign up</a>
-
-
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-    </a>
-    
+    <a href="signup2.html">Sign up</a>
 </div>
-
+</div>
+</div>
 </body>
 </head>
 <head>
-  
 
 </head>
 <body>
@@ -60,53 +59,107 @@
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 15px;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 16px;
+    font-family: Courier; 
+    transition: color 0.7s;
 }
-
-/* Change the color of links on hover */
 .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-/* Add an active class to highlight the current page */
-.topnav a.active {
-    background-color: #04AA6D;
-    color: white;
-}
-
+            color: #f39c12;
+        }
 /* hide the link that should open and close the topnav on small screens */
 .topnav .icon {
     display: none;
 }
+.loader {
+            border: 8px solid #f3f3f3; /* Light grey */
+            border-top: 8px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 5px;
+            height: 5px;
+            animation: spin 2s linear infinite;
+            position: absolute;
+        }
 
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .content {
+            display: none; /* Hidden until loaded */
+            text-align: center;
+        }
  </style>
+  <script>
+    // Simulate content loading
+    window.onload = function() {
+        const loader = document.querySelector('.loader');
+        const content = document.querySelector('.content');
+
+        // Simulate loading delay
+        setTimeout(() => {
+            loader.style.display = 'none'; // Hide loader
+            content.style.display = 'block'; // Show content
+        }, 2000); // Change delay as needed (2000ms = 2 seconds)
+    };
+</script>
 
 <!-- Add font awesome icons -->
 <a href="https://wa.me/+254743896973" class="fa fa-whatsapp"></a>
-<a href="https://www.facebook.com/groups/300225252682722/" class="fa fa-facebook"></a>
+<a href="https://web.facebook.com/profile.php?id=61556703744398" class="fa fa-facebook"></a>
 <a href="https://www.instagram.com/mojeh__254/" class="fa fa-instagram"></a>
 <a href="https://www.youtube.com/channel/UCsfK5pPNfSja2sAMyDVHktw" class="fa fa-youtube"></a>
 <a href=" "class="fa fa-pinterest"></a>
 </head>
-</script>
 <div class="container">
-    <h1 style="font-size:xx-larger"><center>JECFAM TECH SOLUTIONS</center></h1>
+    <h2 style="font-size:xx-larger"><center><strong>JECFAM TECH SOLUTIONS</strong></center></h2>
     <p style="font-size:smaller"><center>(STEALTHY & DILIGENT)</center></p>
    <style>
     h1 {
       font-size: 300%;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-family: 'Courier New', Courier, monospace;
+     
+    }
+    h2 {
+      font-size: 300%;
+      font-family: Museo;
+      color: red;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: transform 0.6s ease, color 1.2s ease;
+      animation: fadeIn 1.5s ease forwards;
+    }
+    }
+    h4 {
+      font-family: museo;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: transform 0.8s ease, color 1.5s ease;
+      animation: fadeIn 1.5s ease forwards;
+    }
+    h4:hover {
+      transform: scale(1.1);
+      color: #ff6347; /* Tomato color */
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
    </style> 
     <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </div>
 <body>
-    <h3><br><center>JECFAM is a Tech Shop specialised in Quality Smart Devices.</center></br></h3>
+    <h4><br><center>JECFAM is a Tech Shop specialised in Quality Smart Devices.</center></br></h4>
     <h4><br><center>We deal with Phone & Laptop repairs & general Accessories.</center></br></h4>
     <h4><br><center>We are located around Chuka University, Nairobi-Meru Highway and Kikuyu in Kiambu.</center></br></h4>
     <h4><br><center>Delivery is done countrywide.</center></br></h4>
@@ -114,7 +167,7 @@
 <style>
   body {
     font-size: larger;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Courier;
     margin: 0;
     padding: 0;
     background-image: url('https://t3.ftcdn.net/jpg/05/19/73/36/360_F_519733648_tSMSHwqxw3TrbgFSXNKJVKncdkC0siTq.jpg'); /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
@@ -123,42 +176,9 @@
     color: #ffffff; /* Set text color to contrast with the background */
 }
 </style>
-<script>
-    // Theme switching logic
-    document.getElementById('theme1').addEventListener('click', function() {
-        document.documentElement.style.setProperty('--bg-color', 'lightblue');
-        document.documentElement.style.setProperty('--text-color', 'black');
-    });
-    document.getElementById('theme2').addEventListener('click', function() {
-        document.documentElement.style.setProperty('--bg-color', 'lightgreen');
-        document.documentElement.style.setProperty('--text-color', 'darkblue');
-    });
-    document.getElementById('theme3').addEventListener('click', function() {
-        document.documentElement.style.setProperty('--bg-color', 'lightgray');
-        document.documentElement.style.setProperty('--text-color', 'darkred');
-    });
-</script>
 <style>
   body {font-family: Arial, Helvetica, sans-serif;}
-  * {box-sizing: border-box}
-  /* Full-width input fields */
-  input[type=text], input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-  }
-  input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
-  }
-  hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
-  }
-  /* Set a style for all buttons */
+   /* Set a style for all buttons */
   button {
     background-color: #04AA6D;
     color: white;
@@ -172,34 +192,6 @@
   button:hover {
     opacity:1;
   }
-  /* Extra styles for the cancel button */
-  .cancelbtn {
-    padding: 14px 20px;
-    background-color: #f44336;
-  }
-  /* Float cancel and signup buttons and add an equal width */
-  .cancelbtn, .signupbtn {
-    float: left;
-    width: 50%;
-  }
-  /* Add padding to container elements */
-  .container {
-    padding: 16px;
-  }
-  /* Clear floats */
-  .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  /* Change styles for cancel button and signup button on extra small screens */
-  @media screen and (max-width: 300px) {
-    .cancelbtn, .signupbtn {
-       width: 100%;
-    }
-  
   </style>
-
-
 </body>
 </html>
